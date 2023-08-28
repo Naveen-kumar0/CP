@@ -40,7 +40,7 @@ int main()
 	candidates.push_back(1);
 	candidates.push_back(1);
 	candidates.push_back(1);
-	candidates.push_back(2);
+	candidates.push_back(3);
 	candidates.push_back(2);
 	Solution s;
 	vector< vector<int> >ans;
