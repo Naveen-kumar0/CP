@@ -1,13 +1,11 @@
 t=int(input())
-for _ in range(t):
-    n=int((input()))
-    h=int(input())
-    m=int(input())
+for _ in range(t):  
+    [n,h,m]=list(map(int,input().split(" ")))
     arr=[]
     for i in range(n):
-        h1=int(input())
-        m1=int(input())
-        arr.extend([h1,m1])
+        h1,m1=list(map(int,input().split(" ")))
+        arr.append(h1)
+        arr.append(m1)
     j=0
     minh=24
     minm=60
@@ -20,16 +18,19 @@ for _ in range(t):
                 h+=1
             th=arr[j]-h
             tm+=arr[j+1]
+            if tm>60:
+                tm-=60
+                th+=1
             minh=min(th,minh)
             if minh==th:
                 minm=tm
+            if m>0:
+                h-=1
         else:
-            print(h,m)
             if m>0:
                 tm=60-m
                 h+=1
             th=24-h
-            #tm+=m
             th+=arr[j]
             tm+=arr[j+1]
             if tm>60:
