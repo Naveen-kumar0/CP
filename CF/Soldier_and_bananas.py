@@ -1,3 +1,4 @@
+#https://codeforces.com/problemset/problem/546/A
 [k,n,w]=list(map(int,input().split(" ")))
 ans=0
 sum=0
