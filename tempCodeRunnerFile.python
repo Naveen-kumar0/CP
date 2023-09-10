@@ -1,10 +1,11 @@
-[n,k]=list(map(int,input().split()))
-for i in range(k):
-    if n%10==0:
-        n/=10
-    else:
-        n-=1
-if n<0:
-    print(0)
+n=int(input())
+s1="I hate that"
+s2="I love that"
+if n % 2==0:
+    for i in range(n//2-1):
+        print(s1,s2,end=" ")
+    print("I love it")
 else:
-    print(int(n))
+    for i in range((n//2)):
+        print(s1,s2,end=" ")
+    print("I hate it")
