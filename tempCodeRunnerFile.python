@@ -1,7 +1,21 @@
-s=input()
-s1=input()
-x=s[::-1]
-if s1==x:
-    print("YES")
-else:
-    print("NO")
+def check(temp):
+    if temp=="111" or temp=="110" or temp=="101":
+        return True
+t=int(input())
+for _ in range(t):
+    f=0
+    n=int(input())
+    s=input()
+    s=list(s)
+    x=0
+    i=0
+    while i< (len(s)-2):
+        temp=s[i]+s[i+1]+s[i+2]
+        if check(temp):
+            f=1
+            s[i]='1'
+            s[i+1]='0'
+            s[i+2]='0'
+            i+=3
+        i+=1
+    print(s)
