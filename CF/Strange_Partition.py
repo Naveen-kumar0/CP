@@ -5,11 +5,7 @@ for _ in range(t):
     arr=list(map(int,input().split()))
     ans=int(math.ceil(sum(arr)/x))
     f=0
+    maxx=0
     for i in arr:
-        if i%x!=0:
-            f=1
-            break
-    if f==0:
-        print(ans,ans)
-    else:
-        print(ans,ans+1)
+        maxx+=int(math.ceil(i/x))
+    print(ans,maxx)
