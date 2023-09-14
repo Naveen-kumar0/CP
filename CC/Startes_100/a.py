@@ -1,6 +1,5 @@
-#include<bits/stdc++.h>
-using namespace std;
-int main()
-{
-    
-}
+n=int(input())
+if n <100:
+    print("YES")
+else:
+    print("NO")
