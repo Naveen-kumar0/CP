@@ -1,3 +1,4 @@
+#https://codeforces.com/contest/1722/problem/B
 t=int(input())
 for _ in range(t):
     n=int(input())
